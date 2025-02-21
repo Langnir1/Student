@@ -13,5 +13,6 @@ class Date{
 	Date();
 	void init(std::string dateString);
 	void printDate();
-}; 
+};
 
+#endif //end DATE_H
