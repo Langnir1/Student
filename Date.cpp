@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include "Date.h"
 
 Date::Date(){
@@ -15,8 +16,8 @@ void Date::init(std::string dateStr){
 	std::string dayStr;
 	std::string yearStr;
 
-	std::getline(ss, monthStr, "/");
-	std::getline(ss, dayStr, "/");
+	std::getline(ss, monthStr, '/');
+	std::getline(ss, dayStr, '/');
 	std::getline(ss, yearStr);
 
 	ss.clear();

@@ -1,17 +1,18 @@
-Info: student.o date.o address.o main.o
+Info: Student.o Date.o Address.o main.o
+	g++ -g Student.o Date.o Address.o main.o -o Info
 
-address.o: Address.cpp Address.h
-	g++ -c Address.cpp
+Address.o: Address.cpp Address.h
+	g++ -g -c Address.cpp
 
-date.o: Date.cpp Date.h
-	g++ -c Date.cpp
+Date.o: Date.cpp Date.h
+	g++ -g -c Date.cpp
 
-student.o: Student.cpp Student.h Date.h Address.h
-	g++ -c Student.cpp
+Student.o: Student.cpp Student.h Date.h Address.h
+	g++ -g -c Student.cpp
 
-main.o: main.cpp Date.h
-	g++ -c main.cpp
+main.o: main.cpp Date.h Student.h Address.h
+	g++ -g -c main.cpp
 
 clean:
-	rm -f *.0 Info
+	rm -f *.o Info
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Address.h"
 #include "Date.h"
 #include "Student.h"
@@ -33,7 +34,7 @@ void testStudent(){
 	student->init(studentString);
 	student->printStudent();
 	std::cout << std::endl;
-	std::cout << student-> getLastFirst();
+//	std::cout << student-> getLastFirst();
 	delete student;
 } //end testStudent
 

@@ -4,6 +4,7 @@
 #include "Date.h"
 #include "Address.h"
 
+
 Student::Student(){
 	studentString = "";
 	name = "";
@@ -23,7 +24,7 @@ Student::~Student(){
 void Student::init(std::string studentStr){
 	Student::studentString = studentStr;
 	
-	std::stringStream = ss(studentStr);
+	std::stringstream ss(studentStr);
 	std::string name;
 	std::string lastName;
 	std::string street;
@@ -34,14 +35,14 @@ void Student::init(std::string studentStr){
 	std:: string gradStr;
 	std:: string creditHoursStr;
 
-	getline(ss, name, ",");
-	getline(ss, lastName, ",");
-	getline(ss, street, ",");
-	getline(ss, city, ",");
-	getline(ss, state, ",");
-	getline(ss, zipcode, ",");
-	getline(ss, dobStr, ",");
-	getline(ss, gradStr, ",");
+	getline(ss, name, ',');
+	getline(ss, lastName, ',');
+	getline(ss, street, ',');
+	getline(ss, city, ',');
+	getline(ss, state, ',');
+	getline(ss, zipcode, ',');
+	getline(ss, dobStr, ',');
+	getline(ss, gradStr, ',');
 	getline(ss, creditHoursStr);
 
 	name = name;
@@ -50,7 +51,7 @@ void Student::init(std::string studentStr){
 	gradDate->init(gradStr);
 	address->init(street, city, state, zipcode);
 
-	ss.clear()
+	ss.clear();
 	ss.str(creditHoursStr);
 	ss  >> creditHours;
 }
