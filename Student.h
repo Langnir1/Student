@@ -11,7 +11,7 @@ class Student{
 	std::string lastName;
 	Date* dob;
 	Date* gradDate;
-	Address* Address;
+	Address* address;
 	int creditHours;
 
 	public:

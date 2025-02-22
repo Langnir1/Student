@@ -20,7 +20,7 @@ Student::~Student(){
 	delete address;
 }
 
-void Student::init(std::string studentString){
+void Student::init(std::string studentStr){
 	Student::studentString = studentStr;
 	
 	std::stringStream = ss(studentStr);
